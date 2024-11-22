@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
-    public GameObject projectilePrefab;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
+    public GameObject ammusPrefab;
+    public Transform shotPoint;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            GameObject ammusClone = (GameObject)Instantiate(ammusPrefab, shotPoint.transform.position, shotPoint.transform.rotation);
+            ammusClone.transform.localScale = transform.localScale;
         }
     }
 }

@@ -7,7 +7,6 @@ public class PlayerMovement : MonoBehaviour
 {
     private float _horizontalInput = 0;
     private float _verticalInput = 0;
-    public int movementSpeed = 0;
     public int rotationSpeed = 0;
     Rigidbody2D rb2D;
 
@@ -22,7 +21,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        MovePlayer();
         RotatePlayer();
     }
 
@@ -31,10 +29,7 @@ public class PlayerMovement : MonoBehaviour
         _horizontalInput = Input.GetAxisRaw("Horizontal");
         _verticalInput = Input.GetAxisRaw("Vertical");
     }
-    private void MovePlayer()
-    {
-       rb2D.velocity = transform.right * Mathf.Clamp01(_verticalInput) * movementSpeed;
-    }
+    
 
     private void RotatePlayer()
     {
@@ -42,4 +37,3 @@ public class PlayerMovement : MonoBehaviour
         transform.Rotate(Vector3.forward * rotation);
     }
 }
-// moi

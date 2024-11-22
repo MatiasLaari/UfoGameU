@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class Ammus : MonoBehaviour
 {
-    public float moveSpeed;
+    Rigidbody2D rb;
+    public float speed;
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.up * moveSpeed * Time.deltaTime);
+        rb.velocity = new Vector2(speed * transform.localScale.x, 0f);
+    }
+
+    private void OnBecameInvisible()// tämän avulla luoti tuhoutuu ku
+    {
+        Destroy(gameObject);        // tämä tuhoaa peli objectin 
     }
 }

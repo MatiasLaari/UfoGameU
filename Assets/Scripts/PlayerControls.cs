@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerControls : MonoBehaviour
 {
     private float _horizontalInput = 0;
     private float _verticalInput = 0;
     public int rotationSpeed = 0;
     Rigidbody2D rb2D;
+    public float bulletForce;
+    public GameObject bullet;
 
     private void Start()
     {
@@ -17,6 +19,13 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         GetPlayerInput();
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            GameObject newBullet = Instantiate (bullet, transform.position, transform.rotation);
+            newBullet.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.up * bulletForce);
+            Destroy(newBullet, 5.0f);
+        }
     }
 
     private void FixedUpdate()

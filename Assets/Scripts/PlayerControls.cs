@@ -25,7 +25,7 @@ public class PlayerControls : MonoBehaviour
             GameObject newBullet = Instantiate (bullet, transform.position, transform.rotation);
             newBullet.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.up * bulletForce);
             Destroy(newBullet, 5.0f);
-        }
+        }//sup1
     }
 
     private void FixedUpdate()

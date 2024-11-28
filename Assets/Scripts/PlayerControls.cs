@@ -9,8 +9,10 @@ public class PlayerControls : MonoBehaviour
     private float _verticalInput = 0;
     public int rotationSpeed = 0;
     Rigidbody2D rb2D;
-    public float bulletForce;
-    public GameObject bullet;
+
+    public float bulletForce;// luodit
+    public GameObject bullet;//
+
 
     private void Start()
     {
@@ -20,11 +22,11 @@ public class PlayerControls : MonoBehaviour
     {
         GetPlayerInput();
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1"))// nappia painamalla tehd‰‰n alhaalla oleva ehto
         {
-            GameObject newBullet = Instantiate (bullet, transform.position, transform.rotation);
-            newBullet.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.up * bulletForce);
-            Destroy(newBullet, 5.0f);
+            GameObject newBullet = Instantiate (bullet, transform.position, transform.rotation);// t‰‰ll‰ tuodaan peliin luoti.
+            newBullet.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.up * bulletForce);// t‰ss‰ m‰‰ritell‰‰n luodin liikkuvuutta.
+            Destroy(newBullet, 3.0f);// Luodit tuhoutuvat annetun ajan p‰‰st‰.
         }
     }
 

@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 246348163}
   - component: {fileID: 246348164}
+  - component: {fileID: 246348165}
   m_Layer: 0
   m_Name: DSuunta
   m_TagString: Untagged
@@ -168,6 +169,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletForce1: 200
   bullet1: {fileID: 4690484893359094191, guid: e6916e9e698794747b4737ba37e917c9, type: 3}
+--- !u!50 &246348165
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246348162}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &286619307
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,6 +442,52 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &607323826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 607323827}
+  - component: {fileID: 607323828}
+  m_Layer: 0
+  m_Name: Piippu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &607323827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607323826}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.071, y: 1.453, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 953729493}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &607323828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607323826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 154b754e29cd3a34594879f67216af42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 0
+  bulletForce: 400
+  bullet: {fileID: 4690484893359094191, guid: e6916e9e698794747b4737ba37e917c9, type: 3}
 --- !u!1 &678632809
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,6 +498,7 @@ GameObject:
   m_Component:
   - component: {fileID: 678632810}
   - component: {fileID: 678632811}
+  - component: {fileID: 678632812}
   m_Layer: 0
   m_Name: BSuunta
   m_TagString: Untagged
@@ -466,6 +535,27 @@ MonoBehaviour:
   rotationSpeed: 0
   bulletForce: 200
   bullet: {fileID: 4690484893359094191, guid: e6916e9e698794747b4737ba37e917c9, type: 3}
+--- !u!50 &678632812
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678632809}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &693392677
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,8 +649,9 @@ GameObject:
   - component: {fileID: 747445696}
   - component: {fileID: 747445697}
   - component: {fileID: 747445698}
+  - component: {fileID: 747445699}
   m_Layer: 0
-  m_Name: Player
+  m_Name: TykkiHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -595,7 +686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 1
-  bulletForce: 300
+  bulletForce: 0
   bullet: {fileID: 4690484893359094191, guid: e6916e9e698794747b4737ba37e917c9, type: 3}
 --- !u!50 &747445698
 Rigidbody2D:
@@ -618,6 +709,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &747445699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747445695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5da6fcad0da90b4ab5ad107fc1046c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWeaponIndex: 0
+  guns: []
+  weaponHolder: {fileID: 747445695}
+  currentGun: {fileID: 0}
 --- !u!1 &756140791
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,6 +735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 756140792}
   - component: {fileID: 756140793}
+  - component: {fileID: 756140794}
   m_Layer: 0
   m_Name: ESuunta
   m_TagString: Untagged
@@ -663,6 +771,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletForce1: 200
   bullet1: {fileID: 4690484893359094191, guid: e6916e9e698794747b4737ba37e917c9, type: 3}
+--- !u!50 &756140794
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756140791}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &953729491
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,6 +802,7 @@ GameObject:
   m_Component:
   - component: {fileID: 953729493}
   - component: {fileID: 953729492}
+  - component: {fileID: 953729495}
   m_Layer: 0
   m_Name: Tykki1
   m_TagString: Untagged
@@ -741,10 +871,32 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.06, y: -1.44, z: 43.941887}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 607323827}
   m_Father: {fileID: 747445696}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &953729495
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953729491}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1128274765
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,6 +1154,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1765423274}
   - component: {fileID: 1765423275}
+  - component: {fileID: 1765423276}
   m_Layer: 0
   m_Name: CSuunta
   m_TagString: Untagged
@@ -1038,3 +1191,24 @@ MonoBehaviour:
   rotationSpeed: 0
   bulletForce: 200
   bullet: {fileID: 4690484893359094191, guid: e6916e9e698794747b4737ba37e917c9, type: 3}
+--- !u!50 &1765423276
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765423273}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

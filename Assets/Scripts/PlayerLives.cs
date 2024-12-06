@@ -36,6 +36,7 @@ public class PlayerLives : MonoBehaviour
         if (collision.collider.gameObject.CompareTag("Enemy"))
         {
             deathCounter += 1;
+            Destroy(collision.gameObject);
         }
 
         if (deathCounter == 10)

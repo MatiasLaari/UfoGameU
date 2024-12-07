@@ -62,19 +62,6 @@ public class PlayerLives : MonoBehaviour
         if (deathCounter == 50)
         {
             Destroy(heart5);
-            //Instantiate(gameOver,respawner,Quaternion.identity);
         }
-
-
-
-        /*if (collision.collider.gameObject.tag == "Enemy")
-        {
-            Destroy(collision.collider.gameObject);
-            lives -= 1;
-            if (lives <= 0)
-            {
-                Destroy(gameObject);
-            }
-        }*/
     }
 }

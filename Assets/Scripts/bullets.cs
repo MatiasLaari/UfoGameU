@@ -6,10 +6,6 @@ public class bullets : MonoBehaviour
 {
     public GameObject explosionPrefab;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -23,6 +19,7 @@ public class bullets : MonoBehaviour
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
             Destroy(gameObject);
+            
         }
     }
 }

@@ -16,10 +16,10 @@ public class PlayerLives : MonoBehaviour
     private void Awake()
     {
         heart1 = GameObject.Find("HeartContainer1");
-        heart1 = GameObject.Find("HeartContainer2");
-        heart1 = GameObject.Find("HeartContainer3");
-        heart1 = GameObject.Find("HeartContainer4");
-        heart1 = GameObject.Find("HeartContainer5");
+        heart2 = GameObject.Find("HeartContainer2");
+        heart3 = GameObject.Find("HeartContainer3");
+        heart4 = GameObject.Find("HeartContainer4");
+        heart5 = GameObject.Find("HeartContainer5");
     }
     void Start()
     {

@@ -13,9 +13,12 @@ public class PlayerControls : MonoBehaviour
     public float bulletForce;// luodit
     public GameObject bullet;//
 
+    public int score;
+
 
     private void Start()
     {
+        score = 0;
         rb2D = GetComponent<Rigidbody2D>();
     }
     void Update()
@@ -46,5 +49,10 @@ public class PlayerControls : MonoBehaviour
     {
         float rotation = -_horizontalInput * rotationSpeed;
         transform.Rotate(Vector3.forward * rotation);
+    }
+
+    void ScorePoints(int pointsToAdd)
+    {
+        score += pointsToAdd;
     }
 }

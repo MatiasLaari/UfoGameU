@@ -5,9 +5,12 @@ using UnityEngine;
 public class bullets : MonoBehaviour
 {
     public GameObject explosionPrefab;
-    // Start is called before the first frame update
-
+    private PointManager pointManager;
     // Update is called once per frame
+    void Start()
+    {
+        pointManager = GameObject.Find("PointManager").GetComponent<PointManager>();
+    }
     void Update()
     {
         
@@ -18,6 +21,7 @@ public class bullets : MonoBehaviour
         {
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
+            pointManager.UpdateScore(1);
             Destroy(gameObject);
             
         }

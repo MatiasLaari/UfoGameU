@@ -13,7 +13,7 @@ public class PlayerControls : MonoBehaviour
     public float bulletForce;// luodit
     public GameObject bullet;//
 
-    public int score;
+    public int score;// tämä on liitoksissa ScoreManageriin
 
 
     private void Start()
@@ -51,7 +51,7 @@ public class PlayerControls : MonoBehaviour
         transform.Rotate(Vector3.forward * rotation);
     }
 
-    void ScorePoints(int pointsToAdd)
+    void ScorePoints(int pointsToAdd)// ScoreMager koodia
     {
         score += pointsToAdd;
     }

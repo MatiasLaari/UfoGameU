@@ -5,15 +5,15 @@ using TMPro;
 
 public class PointManager : MonoBehaviour
 {
-    public int score;
-    public TMP_Text scoreText;
+    public int score; // ScoreManageriin liittyvä koodi
+    public TMP_Text scoreText;// ScoreManager koodiin liittyvä
     // Start is called before the first frame update
     void Start()
     {
-        
+        scoreText.text = "Score: " + score;
     }
 
-    // Update is called once per frame
+    // ScoreManageriin liittyvä koodi
     public void UpdateScore(int points)
     {
         score += points;

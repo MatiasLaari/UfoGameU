@@ -5,11 +5,11 @@ using UnityEngine;
 public class bullets : MonoBehaviour
 {
     public GameObject explosionPrefab;
-    private PointManager pointManager;
+    private PointManager pointManager; // ScoreMagerin koodia
     // Update is called once per frame
     void Start()
     {
-        pointManager = GameObject.Find("PointManager").GetComponent<PointManager>();
+        pointManager = GameObject.Find("PointManager").GetComponent<PointManager>(); // ScoreManagerin koodia
     }
     void Update()
     {
@@ -21,7 +21,7 @@ public class bullets : MonoBehaviour
         {
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
-            pointManager.UpdateScore(1);
+            pointManager.UpdateScore(1);// t‰m‰ lis‰‰ ScoreManageriiin pisteen
             Destroy(gameObject);
             
         }

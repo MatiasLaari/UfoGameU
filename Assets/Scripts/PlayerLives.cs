@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerLives : MonoBehaviour
@@ -11,6 +12,8 @@ public class PlayerLives : MonoBehaviour
     private GameObject heart5;
     public int deathCounter;
     public int gameOver;
+
+    bool isPaused;
     // Start is called before the first frame update
 
     private void Awake()
@@ -30,6 +33,10 @@ public class PlayerLives : MonoBehaviour
     void Update()
     {
         
+    }
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -62,6 +69,11 @@ public class PlayerLives : MonoBehaviour
         if (deathCounter == 50)
         {
             Destroy(heart5);
+        }
+
+        if (deathCounter == 60)
+        {
+            PauseGame();
         }
     }
 }

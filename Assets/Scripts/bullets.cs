@@ -19,7 +19,8 @@ public class bullets : MonoBehaviour
     {
         if(collision.gameObject.tag == "Enemy")
         {
-            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            GameObject newExplosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            Destroy(newExplosion, 3f);
             Destroy(collision.gameObject);
             pointManager.UpdateScore(1);// t‰m‰ lis‰‰ ScoreManageriiin pisteen
             Destroy(gameObject);

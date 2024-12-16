@@ -19,5 +19,15 @@ public class Menu : MonoBehaviour
         Application.Quit();
         Debug.Log("Quit Button was pressed");
     }
-    
+
+    public void Ohjeet()
+    {
+        SceneManager.LoadScene("Ohjeet");
+    }
+
+    //public void KunniTekijoille()
+    //{
+    //    SceneManager.LoadScene("KunniTekijoille");
+    //}
+
 }

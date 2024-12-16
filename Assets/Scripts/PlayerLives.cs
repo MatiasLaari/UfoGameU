@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -12,6 +13,8 @@ public class PlayerLives : MonoBehaviour
     private GameObject heart5;
     public int deathCounter;
     public int gameOver;
+
+    public GameObject gameOverPanel;
 
     bool isPaused;
     // Start is called before the first frame update
@@ -74,6 +77,10 @@ public class PlayerLives : MonoBehaviour
         if (deathCounter == 60)
         {
             PauseGame();
+            gameOverPanel.SetActive(true);
         }
+
+
+        
     }
 }

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerControls : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class PlayerControls : MonoBehaviour
     public GameObject bullet;//
 
     public int score;// tämä on liitoksissa ScoreManageriin
+
+    
 
 
     private void Start()
@@ -54,5 +57,9 @@ public class PlayerControls : MonoBehaviour
     void ScorePoints(int pointsToAdd)// ScoreMager koodia
     {
         score += pointsToAdd;
+    }
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }

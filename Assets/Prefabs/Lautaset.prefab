@@ -46,7 +46,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3738512998598888039, guid: 94880d86b9778a743857cc45bbf61fc8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.4
+      value: 4.05
       objectReference: {fileID: 0}
     - target: {fileID: 3738512998598888039, guid: 94880d86b9778a743857cc45bbf61fc8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -116,11 +116,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6528701683906765103, guid: 0cef6837eae5ba84b83d77afe27d7dd8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.78
+      value: -4.18
       objectReference: {fileID: 0}
     - target: {fileID: 6528701683906765103, guid: 0cef6837eae5ba84b83d77afe27d7dd8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.85
+      value: -4.19
       objectReference: {fileID: 0}
     - target: {fileID: 6528701683906765103, guid: 0cef6837eae5ba84b83d77afe27d7dd8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -174,7 +174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4688573912626669176, guid: eaee5c5d05f154045901fe14b865ab99, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.3481605
+      value: -0.62816024
       objectReference: {fileID: 0}
     - target: {fileID: 4688573912626669176, guid: eaee5c5d05f154045901fe14b865ab99, type: 3}
       propertyPath: m_LocalPosition.y
@@ -215,10 +215,6 @@ PrefabInstance:
     - target: {fileID: 4688573912626669178, guid: eaee5c5d05f154045901fe14b865ab99, type: 3}
       propertyPath: m_Name
       value: Lautaset1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4688573912626669178, guid: eaee5c5d05f154045901fe14b865ab99, type: 3}
-      propertyPath: m_TagString
-      value: Enemy2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eaee5c5d05f154045901fe14b865ab99, type: 3}

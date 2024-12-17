@@ -176,9 +176,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6528701683906765103}
+  - component: {fileID: 6755967764497162890}
   m_Layer: 0
   m_Name: B
-  m_TagString: Untagged
+  m_TagString: Enemy2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,3 +200,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6755967764497162890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6528701683906765100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 112f53ac4c174d443a6277c52f789d80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 7289452543557000961, guid: 1b70f07e53389d741b1a9501015cc406, type: 3}
+  deathCounter: 0

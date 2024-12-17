@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
+    path: Assets/Scenes/MainMenu.unity
     guid: 569b1f4d618a3724f939f3b4b79b0473
   - enabled: 1
     path: Assets/Scenes/Main.unity
@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ohjeet.unity
     guid: 41be661aa8856c1488eff5b174ce58d7
+  - enabled: 1
+    path: Assets/Scenes/KunniTekijoille.unity
+    guid: a64e58600f58b1b4abfac4c498b49b0b
   m_configObjects: {}

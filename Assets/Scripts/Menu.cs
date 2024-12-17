@@ -25,9 +25,15 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene("Ohjeet");
     }
 
-    //public void KunniTekijoille()
-    //{
-    //    SceneManager.LoadScene("KunniTekijoille");
-    //}
+
+    public void KunniTekijoille()
+    {
+        SceneManager.LoadScene("KunniTekijoille");
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 
 }
